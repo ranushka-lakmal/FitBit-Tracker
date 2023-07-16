@@ -208,7 +208,7 @@
             button1.Name = "button1";
             button1.Size = new Size(112, 40);
             button1.TabIndex = 10;
-            button1.Text = "button1";
+            button1.Text = "ADD";
             button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -217,7 +217,7 @@
             button2.Name = "button2";
             button2.Size = new Size(107, 40);
             button2.TabIndex = 11;
-            button2.Text = "button2";
+            button2.Text = "UPDATE";
             button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -226,7 +226,7 @@
             button3.Name = "button3";
             button3.Size = new Size(104, 40);
             button3.TabIndex = 12;
-            button3.Text = "button3";
+            button3.Text = "DELETE";
             button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -235,16 +235,16 @@
             button4.Name = "button4";
             button4.Size = new Size(104, 40);
             button4.TabIndex = 14;
-            button4.Text = "button4";
+            button4.Text = "RESET";
             button4.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            button6.Location = new Point(893, 677);
+            button6.Location = new Point(856, 677);
             button6.Name = "button6";
-            button6.Size = new Size(104, 40);
+            button6.Size = new Size(141, 40);
             button6.TabIndex = 15;
-            button6.Text = "button6";
+            button6.Text = "REPORT GENERATE";
             button6.UseVisualStyleBackColor = true;
             // 
             // CheatMealForm
