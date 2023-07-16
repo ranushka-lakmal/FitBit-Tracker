@@ -219,5 +219,16 @@ namespace FitBit_Tracker
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listView1.Items)
+            {
+                if (!item.ToString().ToLower().Contains(textBox6.Text.ToLower()))
+                {
+                    listView1.Items.Remove(item);
+                }
+            }
+        }
     }
 }
