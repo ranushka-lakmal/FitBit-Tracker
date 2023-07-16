@@ -42,6 +42,11 @@
             label2 = new Label();
             label1 = new Label();
             listView1 = new ListView();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -98,6 +103,7 @@
             splitContainer1.Panel1.Controls.Add(label3);
             splitContainer1.Panel1.Controls.Add(label2);
             splitContainer1.Panel1.Controls.Add(label1);
+            splitContainer1.Panel1.Paint += splitContainer1_Panel1_Paint_1;
             // 
             // splitContainer1.Panel2
             // 
@@ -147,36 +153,36 @@
             label5.AutoSize = true;
             label5.Location = new Point(37, 322);
             label5.Name = "label5";
-            label5.Size = new Size(38, 15);
+            label5.Size = new Size(67, 15);
             label5.TabIndex = 4;
-            label5.Text = "label5";
+            label5.Text = "Description";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(37, 261);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(62, 15);
             label4.TabIndex = 3;
-            label4.Text = "label4";
+            label4.Text = "Meal Time";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(37, 198);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(36, 15);
             label3.TabIndex = 2;
-            label3.Text = "label3";
+            label3.Text = "Week";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(37, 136);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(31, 15);
             label2.TabIndex = 1;
-            label2.Text = "label2";
+            label2.Text = "Date";
             // 
             // label1
             // 
@@ -196,14 +202,64 @@
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
             // 
+            // button1
+            // 
+            button1.Location = new Point(37, 677);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 40);
+            button1.TabIndex = 10;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(166, 677);
+            button2.Name = "button2";
+            button2.Size = new Size(107, 40);
+            button2.TabIndex = 11;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(297, 677);
+            button3.Name = "button3";
+            button3.Size = new Size(104, 40);
+            button3.TabIndex = 12;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(425, 677);
+            button4.Name = "button4";
+            button4.Size = new Size(104, 40);
+            button4.TabIndex = 14;
+            button4.Text = "button4";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(893, 677);
+            button6.Name = "button6";
+            button6.Size = new Size(104, 40);
+            button6.TabIndex = 15;
+            button6.Text = "button6";
+            button6.UseVisualStyleBackColor = true;
+            // 
             // CheatMealForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.workout_bg;
             ClientSize = new Size(1028, 729);
+            Controls.Add(button6);
+            Controls.Add(button4);
+            Controls.Add(button3);
             Controls.Add(splitContainer1);
+            Controls.Add(button2);
             Controls.Add(button5);
+            Controls.Add(button1);
             Controls.Add(label8);
             Name = "CheatMealForm";
             Text = "CheatMealForm";
@@ -232,5 +288,10 @@
         private Label label2;
         private Label label1;
         private ListView listView1;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button6;
     }
 }
