@@ -95,10 +95,13 @@
             // 
             splitContainer1.Panel1.Controls.Add(textBox5);
             splitContainer1.Panel1.Controls.Add(textBox4);
+            splitContainer1.Panel1.Controls.Add(button3);
             splitContainer1.Panel1.Controls.Add(textBox3);
             splitContainer1.Panel1.Controls.Add(textBox2);
+            splitContainer1.Panel1.Controls.Add(button2);
             splitContainer1.Panel1.Controls.Add(textBox1);
             splitContainer1.Panel1.Controls.Add(label5);
+            splitContainer1.Panel1.Controls.Add(button1);
             splitContainer1.Panel1.Controls.Add(label4);
             splitContainer1.Panel1.Controls.Add(label3);
             splitContainer1.Panel1.Controls.Add(label2);
@@ -107,7 +110,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(button6);
             splitContainer1.Panel2.Controls.Add(listView1);
+            splitContainer1.Panel2.Controls.Add(button4);
             splitContainer1.Size = new Size(960, 559);
             splitContainer1.SplitterDistance = 392;
             splitContainer1.TabIndex = 13;
@@ -204,7 +209,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(37, 677);
+            button1.Location = new Point(3, 507);
             button1.Name = "button1";
             button1.Size = new Size(112, 40);
             button1.TabIndex = 10;
@@ -213,7 +218,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(166, 677);
+            button2.Location = new Point(130, 507);
             button2.Name = "button2";
             button2.Size = new Size(107, 40);
             button2.TabIndex = 11;
@@ -222,7 +227,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(297, 677);
+            button3.Location = new Point(260, 507);
             button3.Name = "button3";
             button3.Size = new Size(104, 40);
             button3.TabIndex = 12;
@@ -231,7 +236,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(425, 677);
+            button4.Location = new Point(23, 507);
             button4.Name = "button4";
             button4.Size = new Size(104, 40);
             button4.TabIndex = 14;
@@ -240,7 +245,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(856, 677);
+            button6.Location = new Point(400, 507);
             button6.Name = "button6";
             button6.Size = new Size(141, 40);
             button6.TabIndex = 15;
@@ -253,13 +258,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.workout_bg;
             ClientSize = new Size(1028, 729);
-            Controls.Add(button6);
-            Controls.Add(button4);
-            Controls.Add(button3);
             Controls.Add(splitContainer1);
-            Controls.Add(button2);
             Controls.Add(button5);
-            Controls.Add(button1);
             Controls.Add(label8);
             Name = "CheatMealForm";
             Text = "CheatMealForm";
