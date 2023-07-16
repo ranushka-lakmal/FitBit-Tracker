@@ -51,6 +51,8 @@
             button5 = new Button();
             button6 = new Button();
             listView1 = new ListView();
+            textBox6 = new TextBox();
+            button7 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -308,14 +310,31 @@
             // 
             // listView1
             // 
-            listView1.Location = new Point(470, 91);
+            listView1.Location = new Point(470, 153);
             listView1.Name = "listView1";
-            listView1.Size = new Size(537, 444);
+            listView1.Size = new Size(537, 382);
             listView1.TabIndex = 12;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
             listView1.SelectedIndexChanged += listView1_SelectedIndexChanged_1;
             listView1.Click += listView1_Click_1;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(473, 109);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(377, 23);
+            textBox6.TabIndex = 13;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(874, 109);
+            button7.Name = "button7";
+            button7.Size = new Size(75, 23);
+            button7.TabIndex = 14;
+            button7.Text = "button7";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // WorkoutRecPage
             // 
@@ -323,6 +342,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.workout_bg;
             ClientSize = new Size(1028, 729);
+            Controls.Add(button7);
+            Controls.Add(textBox6);
             Controls.Add(listView1);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -367,5 +388,7 @@
         private Button button5;
         private Button button6;
         private ListView listView1;
+        private TextBox textBox6;
+        private Button button7;
     }
 }
