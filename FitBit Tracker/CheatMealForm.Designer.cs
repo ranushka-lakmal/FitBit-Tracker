@@ -31,22 +31,29 @@
             button5 = new Button();
             label8 = new Label();
             splitContainer1 = new SplitContainer();
+            dateTimePicker1 = new DateTimePicker();
             textBox5 = new TextBox();
             textBox4 = new TextBox();
+            button3 = new Button();
             textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            button2 = new Button();
             textBox1 = new TextBox();
             label5 = new Label();
+            button1 = new Button();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            listView1 = new ListView();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
             button6 = new Button();
+            listView1 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            columnHeader5 = new ColumnHeader();
+            button4 = new Button();
+            button7 = new Button();
+            textBox6 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -93,11 +100,11 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(dateTimePicker1);
             splitContainer1.Panel1.Controls.Add(textBox5);
             splitContainer1.Panel1.Controls.Add(textBox4);
             splitContainer1.Panel1.Controls.Add(button3);
             splitContainer1.Panel1.Controls.Add(textBox3);
-            splitContainer1.Panel1.Controls.Add(textBox2);
             splitContainer1.Panel1.Controls.Add(button2);
             splitContainer1.Panel1.Controls.Add(textBox1);
             splitContainer1.Panel1.Controls.Add(label5);
@@ -110,12 +117,21 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(button7);
+            splitContainer1.Panel2.Controls.Add(textBox6);
             splitContainer1.Panel2.Controls.Add(button6);
             splitContainer1.Panel2.Controls.Add(listView1);
             splitContainer1.Panel2.Controls.Add(button4);
             splitContainer1.Size = new Size(960, 559);
             splitContainer1.SplitterDistance = 392;
             splitContainer1.TabIndex = 13;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(110, 136);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(245, 23);
+            dateTimePicker1.TabIndex = 13;
             // 
             // textBox5
             // 
@@ -132,6 +148,21 @@
             textBox4.Size = new Size(245, 23);
             textBox4.TabIndex = 8;
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Red;
+            button3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Image = Properties.Resources.delete1;
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(264, 498);
+            button3.Name = "button3";
+            button3.Size = new Size(119, 49);
+            button3.TabIndex = 12;
+            button3.Text = "DELETE";
+            button3.TextAlign = ContentAlignment.MiddleRight;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
             // textBox3
             // 
             textBox3.Location = new Point(110, 195);
@@ -139,12 +170,20 @@
             textBox3.Size = new Size(245, 23);
             textBox3.TabIndex = 7;
             // 
-            // textBox2
+            // button2
             // 
-            textBox2.Location = new Point(110, 133);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(245, 23);
-            textBox2.TabIndex = 6;
+            button2.BackColor = Color.Gold;
+            button2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Image = Properties.Resources.refresh1;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(118, 498);
+            button2.Name = "button2";
+            button2.Size = new Size(134, 49);
+            button2.TabIndex = 11;
+            button2.Text = "UPDATE";
+            button2.TextAlign = ContentAlignment.MiddleRight;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // textBox1
             // 
@@ -161,6 +200,21 @@
             label5.Size = new Size(67, 15);
             label5.TabIndex = 4;
             label5.Text = "Description";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.RoyalBlue;
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Image = Properties.Resources.plus3;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(6, 498);
+            button1.Name = "button1";
+            button1.Size = new Size(101, 49);
+            button1.TabIndex = 10;
+            button1.Text = "ADD";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label4
             // 
@@ -199,58 +253,93 @@
             label1.Text = "ID";
             label1.Click += label1_Click;
             // 
+            // button6
+            // 
+            button6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.Image = Properties.Resources.health_check;
+            button6.ImageAlign = ContentAlignment.MiddleLeft;
+            button6.Location = new Point(406, 498);
+            button6.Name = "button6";
+            button6.Size = new Size(135, 49);
+            button6.TabIndex = 15;
+            button6.Text = "REPORT GENERATE";
+            button6.TextAlign = ContentAlignment.MiddleRight;
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
             // listView1
             // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
+            listView1.GridLines = true;
             listView1.Location = new Point(23, 76);
             listView1.Name = "listView1";
             listView1.Size = new Size(518, 404);
             listView1.TabIndex = 0;
             listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            listView1.Click += listView1_Click;
             // 
-            // button1
+            // columnHeader1
             // 
-            button1.Location = new Point(3, 507);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 40);
-            button1.TabIndex = 10;
-            button1.Text = "ADD";
-            button1.UseVisualStyleBackColor = true;
+            columnHeader1.Text = "id";
             // 
-            // button2
+            // columnHeader2
             // 
-            button2.Location = new Point(130, 507);
-            button2.Name = "button2";
-            button2.Size = new Size(107, 40);
-            button2.TabIndex = 11;
-            button2.Text = "UPDATE";
-            button2.UseVisualStyleBackColor = true;
+            columnHeader2.Text = "date";
+            columnHeader2.Width = 160;
             // 
-            // button3
+            // columnHeader3
             // 
-            button3.Location = new Point(260, 507);
-            button3.Name = "button3";
-            button3.Size = new Size(104, 40);
-            button3.TabIndex = 12;
-            button3.Text = "DELETE";
-            button3.UseVisualStyleBackColor = true;
+            columnHeader3.Text = "week";
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "meal type";
+            columnHeader4.Width = 120;
+            // 
+            // columnHeader5
+            // 
+            columnHeader5.Text = "description";
+            columnHeader5.Width = 132;
             // 
             // button4
             // 
-            button4.Location = new Point(23, 507);
+            button4.BackColor = Color.FromArgb(64, 0, 64);
+            button4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ControlLightLight;
+            button4.Image = Properties.Resources.undo;
+            button4.ImageAlign = ContentAlignment.MiddleLeft;
+            button4.Location = new Point(23, 498);
             button4.Name = "button4";
-            button4.Size = new Size(104, 40);
+            button4.Size = new Size(118, 49);
             button4.TabIndex = 14;
             button4.Text = "RESET";
-            button4.UseVisualStyleBackColor = true;
+            button4.TextAlign = ContentAlignment.MiddleRight;
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
-            // button6
+            // button7
             // 
-            button6.Location = new Point(400, 507);
-            button6.Name = "button6";
-            button6.Size = new Size(141, 40);
-            button6.TabIndex = 15;
-            button6.Text = "REPORT GENERATE";
-            button6.UseVisualStyleBackColor = true;
+            button7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button7.Image = Properties.Resources.search;
+            button7.ImageAlign = ContentAlignment.MiddleLeft;
+            button7.Location = new Point(406, 15);
+            button7.Name = "button7";
+            button7.Size = new Size(135, 42);
+            button7.TabIndex = 17;
+            button7.Text = "SEARCH";
+            button7.TextAlign = ContentAlignment.MiddleRight;
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(23, 16);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(381, 41);
+            textBox6.TabIndex = 16;
             // 
             // CheatMealForm
             // 
@@ -266,6 +355,7 @@
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
+            splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             ResumeLayout(false);
@@ -280,7 +370,6 @@
         private TextBox textBox5;
         private TextBox textBox4;
         private TextBox textBox3;
-        private TextBox textBox2;
         private TextBox textBox1;
         private Label label5;
         private Label label4;
@@ -293,5 +382,13 @@
         private Button button3;
         private Button button4;
         private Button button6;
+        private DateTimePicker dateTimePicker1;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
+        private ColumnHeader columnHeader4;
+        private ColumnHeader columnHeader5;
+        private Button button7;
+        private TextBox textBox6;
     }
 }

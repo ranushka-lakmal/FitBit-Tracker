@@ -321,18 +321,24 @@
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(473, 109);
+            textBox6.Location = new Point(470, 91);
+            textBox6.Multiline = true;
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(377, 23);
+            textBox6.Size = new Size(384, 41);
             textBox6.TabIndex = 13;
+            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // button7
             // 
-            button7.Location = new Point(874, 109);
+            button7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button7.Image = Properties.Resources.search;
+            button7.ImageAlign = ContentAlignment.MiddleLeft;
+            button7.Location = new Point(876, 91);
             button7.Name = "button7";
-            button7.Size = new Size(75, 23);
+            button7.Size = new Size(131, 42);
             button7.TabIndex = 14;
-            button7.Text = "button7";
+            button7.Text = "SEARCH";
+            button7.TextAlign = ContentAlignment.MiddleRight;
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
