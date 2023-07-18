@@ -220,6 +220,7 @@ namespace FitBit_Tracker
 
         }
 
+        //serach btn
         private void button7_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in listView1.Items)
@@ -229,6 +230,11 @@ namespace FitBit_Tracker
                     listView1.Items.Remove(item);
                 }
             }
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
