@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            textBox5 = new TextBox();
+            textBox3 = new TextBox();
             label7 = new Label();
             textBox4 = new TextBox();
-            textBox3 = new TextBox();
+            textBox2 = new TextBox();
             label6 = new Label();
             label5 = new Label();
-            textBox2 = new TextBox();
+            textBox5 = new TextBox();
             label4 = new Label();
             cmboPatten = new ComboBox();
             label3 = new Label();
@@ -53,19 +53,21 @@
             listView1 = new ListView();
             textBox6 = new TextBox();
             button7 = new Button();
+            button8 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.BackColor = Color.White;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(textBox5);
+            panel1.Controls.Add(textBox3);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(textBox5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(cmboPatten);
             panel1.Controls.Add(label3);
@@ -79,43 +81,45 @@
             panel1.Size = new Size(367, 444);
             panel1.TabIndex = 1;
             // 
-            // textBox5
+            // textBox3
             // 
-            textBox5.Location = new Point(140, 207);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(197, 23);
-            textBox5.TabIndex = 13;
+            textBox3.Location = new Point(143, 250);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(197, 23);
+            textBox3.TabIndex = 13;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(16, 210);
+            label7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(18, 210);
             label7.Name = "label7";
-            label7.Size = new Size(89, 15);
+            label7.Size = new Size(104, 17);
             label7.TabIndex = 12;
             label7.Text = "Burned Calaries";
             label7.Click += label7_Click;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(140, 365);
+            textBox4.Location = new Point(140, 301);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(197, 23);
             textBox4.TabIndex = 11;
             // 
-            // textBox3
+            // textBox2
             // 
-            textBox3.Location = new Point(140, 301);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(197, 23);
-            textBox3.TabIndex = 10;
+            textBox2.Location = new Point(140, 210);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(197, 23);
+            textBox2.TabIndex = 10;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(13, 368);
+            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(13, 357);
             label6.Name = "label6";
-            label6.Size = new Size(72, 15);
+            label6.Size = new Size(87, 17);
             label6.TabIndex = 9;
             label6.Text = "Weight (k.g)";
             label6.Click += label6_Click;
@@ -123,28 +127,32 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(13, 306);
+            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(16, 301);
             label5.Name = "label5";
-            label5.Size = new Size(68, 15);
+            label5.Size = new Size(81, 17);
             label5.TabIndex = 8;
             label5.Text = "Height ( f.t)";
             label5.Click += label5_Click;
             // 
-            // textBox2
+            // textBox5
             // 
-            textBox2.Location = new Point(140, 253);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(200, 23);
-            textBox2.TabIndex = 7;
+            textBox5.Location = new Point(143, 351);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(200, 23);
+            textBox5.TabIndex = 7;
+            textBox5.TextChanged += textBox2_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(13, 256);
             label4.Name = "label4";
-            label4.Size = new Size(114, 15);
+            label4.Size = new Size(132, 17);
             label4.TabIndex = 6;
-            label4.Text = "Time Duration (Min)";
+            label4.Text = "Time Duration(Min)";
+            label4.Click += label4_Click;
             // 
             // cmboPatten
             // 
@@ -160,9 +168,10 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(16, 161);
             label3.Name = "label3";
-            label3.Size = new Size(89, 15);
+            label3.Size = new Size(106, 17);
             label3.TabIndex = 4;
             label3.Text = "Exersise Pattern";
             // 
@@ -176,9 +185,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(16, 111);
             label2.Name = "label2";
-            label2.Size = new Size(31, 15);
+            label2.Size = new Size(37, 17);
             label2.TabIndex = 2;
             label2.Text = "Date";
             // 
@@ -192,9 +202,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(16, 64);
             label1.Name = "label1";
-            label1.Size = new Size(66, 15);
+            label1.Size = new Size(78, 17);
             label1.TabIndex = 0;
             label1.Text = "Workout Id";
             label1.Click += label1_Click;
@@ -220,7 +231,7 @@
             button2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Image = Properties.Resources.refresh;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(157, 579);
+            button2.Location = new Point(163, 579);
             button2.Name = "button2";
             button2.Size = new Size(137, 66);
             button2.TabIndex = 3;
@@ -235,7 +246,7 @@
             button3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.Image = Properties.Resources.delete1;
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(309, 579);
+            button3.Location = new Point(324, 579);
             button3.Name = "button3";
             button3.Size = new Size(127, 66);
             button3.TabIndex = 4;
@@ -251,7 +262,7 @@
             button4.ForeColor = SystemColors.ButtonFace;
             button4.Image = Properties.Resources.undo;
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(470, 579);
+            button4.Location = new Point(484, 579);
             button4.Name = "button4";
             button4.Size = new Size(117, 66);
             button4.TabIndex = 5;
@@ -299,7 +310,7 @@
             button6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             button6.Image = Properties.Resources.health_check;
             button6.ImageAlign = ContentAlignment.MiddleLeft;
-            button6.Location = new Point(874, 579);
+            button6.Location = new Point(625, 579);
             button6.Name = "button6";
             button6.Size = new Size(133, 66);
             button6.TabIndex = 11;
@@ -342,12 +353,28 @@
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
+            // button8
+            // 
+            button8.BackColor = Color.Snow;
+            button8.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button8.Image = Properties.Resources.dumbbells_gym_fitness_sport_icon_186993;
+            button8.ImageAlign = ContentAlignment.MiddleLeft;
+            button8.Location = new Point(786, 579);
+            button8.Name = "button8";
+            button8.Size = new Size(221, 66);
+            button8.TabIndex = 15;
+            button8.Text = "FITNESS STATUS";
+            button8.TextAlign = ContentAlignment.MiddleRight;
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
+            // 
             // WorkoutRecPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.workout_bg;
             ClientSize = new Size(1028, 729);
+            Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(textBox6);
             Controls.Add(listView1);
@@ -382,19 +409,20 @@
         private Label label2;
         private TextBox textBox1;
         private ComboBox cmboPatten;
-        private TextBox textBox2;
+        private TextBox textBox5;
         private Label label4;
         private Label label5;
         private Label label6;
         private TextBox textBox4;
-        private TextBox textBox3;
+        private TextBox textBox2;
         private Label label7;
-        private TextBox textBox5;
+        private TextBox textBox3;
         private Label label8;
         private Button button5;
         private Button button6;
         private ListView listView1;
         private TextBox textBox6;
         private Button button7;
+        private Button button8;
     }
 }

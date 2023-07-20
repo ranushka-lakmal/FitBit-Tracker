@@ -88,18 +88,15 @@ namespace FitBit_Tracker
 
         private void WorkoutRecPage_Load(object sender, EventArgs e)
         {
-            /*int w = Screen.PrimaryScreen.Bounds.Width;
-            int h = Screen.PrimaryScreen.Bounds.Height;
-            this.Location = new Point(0, 0);
-            this.Size = new Size(w, h);*/
+         
 
             listView1.Columns.Add("ID", 80);
             listView1.Columns.Add("Date", 120);
             listView1.Columns.Add("Excersise Pattern", 120);
-            listView1.Columns.Add("Duration", 120);
             listView1.Columns.Add("Burned Calories", 120);
-            listView1.Columns.Add("Height", 120);
-            listView1.Columns.Add("Weight", 120);
+            listView1.Columns.Add("TIME", 120);
+            listView1.Columns.Add("HEIGHT", 120);
+            listView1.Columns.Add("WEIGHT", 120);
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -114,10 +111,11 @@ namespace FitBit_Tracker
                 textBox1.Text = listView1.SelectedItems[0].SubItems[0].Text;
                 dateTimePicker1.Text = listView1.SelectedItems[0].SubItems[1].Text;
                 cmboPatten.Text = listView1.SelectedItems[0].SubItems[2].Text;
-                textBox5.Text = listView1.SelectedItems[0].SubItems[3].Text;
-                textBox2.Text = listView1.SelectedItems[0].SubItems[4].Text;
-                textBox3.Text = listView1.SelectedItems[0].SubItems[5].Text;
-                textBox4.Text = listView1.SelectedItems[0].SubItems[6].Text;
+
+                textBox2.Text = listView1.SelectedItems[0].SubItems[3].Text; //WE //TI
+                textBox3.Text = listView1.SelectedItems[0].SubItems[4].Text;//CAL //WE
+                textBox4.Text = listView1.SelectedItems[0].SubItems[5].Text;//HE //HE
+                textBox5.Text = listView1.SelectedItems[0].SubItems[6].Text;//TI //CAL
 
             }
         }
@@ -134,9 +132,9 @@ namespace FitBit_Tracker
                 listView1.SelectedItems[0].SubItems[0].Text = textBox1.Text;
                 listView1.SelectedItems[0].SubItems[1].Text = dateTimePicker1.Text;
                 listView1.SelectedItems[0].SubItems[2].Text = cmboPatten.Text;
-                textBox5.Text = listView1.SelectedItems[0].SubItems[3].Text = textBox5.Text;
-                textBox2.Text = listView1.SelectedItems[0].SubItems[4].Text = textBox2.Text;
-                textBox3.Text = listView1.SelectedItems[0].SubItems[5].Text = textBox3.Text;
+                textBox3.Text = listView1.SelectedItems[0].SubItems[3].Text = textBox3.Text;
+                textBox5.Text = listView1.SelectedItems[0].SubItems[4].Text = textBox5.Text;
+                textBox2.Text = listView1.SelectedItems[0].SubItems[5].Text = textBox2.Text;
                 textBox4.Text = listView1.SelectedItems[0].SubItems[6].Text = textBox4.Text;
 
                 MessageBox.Show("Successfully Update !!");
@@ -233,6 +231,66 @@ namespace FitBit_Tracker
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DateTime maxDate = DateTime.MinValue;
+            DateTime minDate = DateTime.MaxValue;
+            double maxWeight = 0;
+            double minWeight = 0;
+
+            // to find max & min date and relevent weights
+            foreach (ListViewItem item in listView1.Items)
+            {
+                DateTime currentDate = DateTime.Parse(item.SubItems[1].Text);
+
+
+                double currentWeight = double.Parse(item.SubItems[6].Text);
+
+                if (currentDate > maxDate)
+                {
+                    maxDate = currentDate;
+                    maxWeight = currentWeight;
+                }
+
+                if (currentDate < minDate)
+                {
+                    minDate = currentDate;
+                    minWeight = currentWeight;
+                }
+            }
+
+            // cal weight diff
+            double weightDifference = maxWeight - minWeight;
+            if (weightDifference > 0)
+            {
+                MessageBox.Show($"Current Date: {maxDate}" +
+                    $"\nWorkout Started At: {minDate}" +
+                    $"\nCurrent Weight: {maxWeight}" +
+                    $"\nWeight on start: {minWeight}" +
+                    $"\nYou gained: {weightDifference}kgs" +
+                    $"\nWAW, GREAT JOB KEEP IT !!");
+            }
+            else
+            {
+                MessageBox.Show($"Current Date: {maxDate}" +
+                    $"\nWorkout Started At: {minDate}" +
+                    $"\nCurrent Weight: {maxWeight}" +
+                    $"\nWeight on start: {minWeight}" +
+                    $"\nYou lost: {weightDifference}kgs" +
+                    $"\nWAW, GREAT JOB KEEP IT !!");
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

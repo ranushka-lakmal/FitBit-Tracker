@@ -185,5 +185,10 @@ namespace FitBit_Tracker
                 }
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
