@@ -88,7 +88,7 @@ namespace FitBit_Tracker
 
         private void WorkoutRecPage_Load(object sender, EventArgs e)
         {
-         
+
 
             listView1.Columns.Add("ID", 80);
             listView1.Columns.Add("Date", 120);
@@ -106,16 +106,18 @@ namespace FitBit_Tracker
 
         private void listView1_Click_1(object sender, EventArgs e)
         {
+            // tble click view
+
             if (listView1.SelectedItems.Count > 0)
             {
                 textBox1.Text = listView1.SelectedItems[0].SubItems[0].Text;
                 dateTimePicker1.Text = listView1.SelectedItems[0].SubItems[1].Text;
                 cmboPatten.Text = listView1.SelectedItems[0].SubItems[2].Text;
 
-                textBox2.Text = listView1.SelectedItems[0].SubItems[3].Text; //WE //TI
-                textBox3.Text = listView1.SelectedItems[0].SubItems[4].Text;//CAL //WE
-                textBox4.Text = listView1.SelectedItems[0].SubItems[5].Text;//HE //HE
-                textBox5.Text = listView1.SelectedItems[0].SubItems[6].Text;//TI //CAL
+                textBox2.Text = listView1.SelectedItems[0].SubItems[3].Text;
+                textBox3.Text = listView1.SelectedItems[0].SubItems[4].Text;
+                textBox4.Text = listView1.SelectedItems[0].SubItems[5].Text;
+                textBox5.Text = listView1.SelectedItems[0].SubItems[6].Text;
 
             }
         }
@@ -127,15 +129,18 @@ namespace FitBit_Tracker
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //update btn
             if (listView1.SelectedItems.Count > 0)
             {
                 listView1.SelectedItems[0].SubItems[0].Text = textBox1.Text;
                 listView1.SelectedItems[0].SubItems[1].Text = dateTimePicker1.Text;
                 listView1.SelectedItems[0].SubItems[2].Text = cmboPatten.Text;
-                textBox3.Text = listView1.SelectedItems[0].SubItems[3].Text = textBox3.Text;
-                textBox5.Text = listView1.SelectedItems[0].SubItems[4].Text = textBox5.Text;
-                textBox2.Text = listView1.SelectedItems[0].SubItems[5].Text = textBox2.Text;
-                textBox4.Text = listView1.SelectedItems[0].SubItems[6].Text = textBox4.Text;
+                listView1.SelectedItems[0].SubItems[3].Text = textBox2.Text;
+                listView1.SelectedItems[0].SubItems[4].Text = textBox3.Text;
+                listView1.SelectedItems[0].SubItems[5].Text = textBox4.Text;
+                listView1.SelectedItems[0].SubItems[6].Text = textBox5.Text;
+
+
 
                 MessageBox.Show("Successfully Update !!");
             }

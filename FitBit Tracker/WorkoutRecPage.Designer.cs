@@ -54,6 +54,8 @@
             textBox6 = new TextBox();
             button7 = new Button();
             button8 = new Button();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker3 = new DateTimePicker();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -332,7 +334,7 @@
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(470, 91);
+            textBox6.Location = new Point(470, 82);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(384, 41);
@@ -344,7 +346,7 @@
             button7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             button7.Image = Properties.Resources.search;
             button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(876, 91);
+            button7.Location = new Point(876, 82);
             button7.Name = "button7";
             button7.Size = new Size(131, 42);
             button7.TabIndex = 14;
@@ -368,12 +370,28 @@
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new Point(470, 129);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(200, 23);
+            dateTimePicker2.TabIndex = 16;
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Location = new Point(807, 130);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(200, 23);
+            dateTimePicker3.TabIndex = 17;
+            // 
             // WorkoutRecPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.workout_bg;
             ClientSize = new Size(1028, 729);
+            Controls.Add(dateTimePicker3);
+            Controls.Add(dateTimePicker2);
             Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(textBox6);
@@ -424,5 +442,7 @@
         private TextBox textBox6;
         private Button button7;
         private Button button8;
+        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateTimePicker3;
     }
 }
