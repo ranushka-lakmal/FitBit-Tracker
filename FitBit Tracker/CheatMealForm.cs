@@ -90,7 +90,8 @@ namespace FitBit_Tracker
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are You Sure to Delete this Record ?", "Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Are You Sure to Delete this Record ?", "Delete", MessageBoxButtons.OKCancel, 
+                MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 listView1.Items.RemoveAt(listView1.SelectedIndices[0]);
             }
