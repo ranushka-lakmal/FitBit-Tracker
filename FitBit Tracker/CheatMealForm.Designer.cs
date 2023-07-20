@@ -44,6 +44,8 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            button7 = new Button();
+            textBox6 = new TextBox();
             button6 = new Button();
             listView1 = new ListView();
             columnHeader1 = new ColumnHeader();
@@ -52,8 +54,6 @@
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
             button4 = new Button();
-            button7 = new Button();
-            textBox6 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -195,9 +195,10 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(37, 322);
+            label5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(17, 320);
             label5.Name = "label5";
-            label5.Size = new Size(67, 15);
+            label5.Size = new Size(90, 18);
             label5.TabIndex = 4;
             label5.Text = "Description";
             // 
@@ -219,39 +220,66 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(37, 261);
+            label4.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(17, 259);
             label4.Name = "label4";
-            label4.Size = new Size(62, 15);
+            label4.Size = new Size(81, 18);
             label4.TabIndex = 3;
             label4.Text = "Meal Time";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(37, 198);
+            label3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(18, 196);
             label3.Name = "label3";
-            label3.Size = new Size(36, 15);
+            label3.Size = new Size(47, 18);
             label3.TabIndex = 2;
             label3.Text = "Week";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(37, 136);
+            label2.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(18, 136);
             label2.Name = "label2";
-            label2.Size = new Size(31, 15);
+            label2.Size = new Size(84, 18);
             label2.TabIndex = 1;
-            label2.Text = "Date";
+            label2.Text = "Date & Time";
+            label2.Click += label2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(37, 79);
+            label1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(17, 77);
             label1.Name = "label1";
-            label1.Size = new Size(18, 15);
+            label1.Size = new Size(61, 18);
             label1.TabIndex = 0;
-            label1.Text = "ID";
+            label1.Text = "Meal ID";
             label1.Click += label1_Click;
+            // 
+            // button7
+            // 
+            button7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button7.Image = Properties.Resources.search;
+            button7.ImageAlign = ContentAlignment.MiddleLeft;
+            button7.Location = new Point(406, 15);
+            button7.Name = "button7";
+            button7.Size = new Size(135, 42);
+            button7.TabIndex = 17;
+            button7.Text = "SEARCH";
+            button7.TextAlign = ContentAlignment.MiddleRight;
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(23, 16);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(381, 41);
+            textBox6.TabIndex = 16;
             // 
             // button6
             // 
@@ -319,28 +347,6 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
-            // button7
-            // 
-            button7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.Image = Properties.Resources.search;
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(406, 15);
-            button7.Name = "button7";
-            button7.Size = new Size(135, 42);
-            button7.TabIndex = 17;
-            button7.Text = "SEARCH";
-            button7.TextAlign = ContentAlignment.MiddleRight;
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(23, 16);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(381, 41);
-            textBox6.TabIndex = 16;
-            // 
             // CheatMealForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -351,6 +357,7 @@
             Controls.Add(button5);
             Controls.Add(label8);
             Name = "CheatMealForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CheatMealForm";
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
